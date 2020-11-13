@@ -1,0 +1,21 @@
+language: cpp
+compiler:
+  - gcc
+os:
+  - linux
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+script:
+  - cd LinuxClient
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER ..
+  - cmake --build .
+  - cd test
+  - ./runTests
