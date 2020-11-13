@@ -60,7 +60,7 @@ bool stopConnecting = false;
 int main(int argc, char* argv[])
 {
 	if(!LoadClientListFromFile())
-		std::cout << "Cant open client list file.  Is it exist?. I create a new one.\n";
+		std::cout << "Cant open client list  file.  Is it exist?. I create a new one.\n";
 
 	short _PORT;
 	if (argc == 2)
